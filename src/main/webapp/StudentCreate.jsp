@@ -7,10 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="createstudent">
+	<form action="StudentCreate">
 
 		<table>
 
+			<tr>
+				<td>Добавление студента</td>
+			</tr>
+			
 			<tr>
 				<td>id:</td>
 				<td><input type="text" name="id"></td>

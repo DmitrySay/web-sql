@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import dao.StudentDao;
 import sql.SqlStudentDao;
 
-@WebServlet("/updatestudent")
-public class UpdateStudentServlet extends HttpServlet {
+@WebServlet("/StudentUpdate")
+public class StudentUpdateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private int id;

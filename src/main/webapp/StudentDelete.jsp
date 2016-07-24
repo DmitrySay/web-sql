@@ -4,45 +4,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Обновление студента</title>
+<title>Удаление студента</title>
 </head>
 <body>
-
-	<form action="updatestudent">
-
+	<form action="StudentDelete">
 		<table>
-
 			<tr>
-				<td>Обновление студента</td>
-			</tr>
-			<tr>
+				<td>Удаление студента по </td>
 				<td>id:</td>
 				<td><input type="text" name="id"></td>
 			</tr>
-
 			<tr>
-				<td>name:</td>
-				<td><input type="text" name="name"></td>
-			</tr>
-
-			<tr>
-				<td>surname:</td>
-				<td><input type="text" name="surname"></td>
-			</tr>
-
-			<tr>
-				<td>groupId:</td>
-				<td><input type="text" name="groupId"></td>
-			</tr>
-
-			<tr>
-
 				<td><input type="submit" value=" submit "></td>
 			</tr>
-
 		</table>
 	</form>
-
-
 </body>
 </html>

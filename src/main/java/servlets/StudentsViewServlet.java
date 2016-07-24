@@ -27,32 +27,41 @@ public class StudentsViewServlet extends HttpServlet {
 
 		PrintWriter out = response.getWriter();
 
-	  try {
+		try {
 
 			StudentDao studentDao = new SqlStudentDao();
-			
+
 			out.println("<B>Список студентов</B>");
 			out.println("<br>");
 			out.println("<B> Id , Имя , Фамилия , Дата поступления, Группа,  MarkId </B>");
 			out.println("<table border=1>");
-			
-			List<Student> l =studentDao.selectAllStudents();
+
+			List<Student> l = studentDao.selectAllStudents();
+
 			for (Student gr : l) {
-                out.println("<tr>");
-                out.println("<td>" + gr.getId() + "</td>");
-                out.println("<td>" + gr.getName() + "</td>");
-                out.println("<td>" + gr.getSurname() + "</td>");
-                out.println("<td>" + gr.getEnrolmentDate() + "</td>");
-                out.println("<td>" + gr.getGroupId() + "</td>");
-                out.println("<td>" + gr.getMarkId() + "</td>");
-                out.println("</tr>");
-            }
-			
+				out.println("<tr>");
+				out.println("<td>" + gr.getId() + "</td>");
+				out.println("<td>" + gr.getName() + "</td>");
+				out.println("<td>" + gr.getSurname() + "</td>");
+				out.println("<td>" + gr.getEnrolmentDate() + "</td>");
+				out.println("<td>" + gr.getGroupId() + "</td>");
+				out.println("<td>" + gr.getMarkId() + "</td>");
+				out.println("</tr>");
+
+			}
+
 			studentDao.close();
-	  } catch (Exception e) {
+		} catch (Exception e) {
 			out.println("Ошибка выполнения webstudentDao");
 		}
-	    out.println("</table>");
+		out.println("</table>");
+
+		out.println("<p><a href=\"/lesson11\">На Главную страницу</a></p>");
+		out.println("<p><a href=\"/lesson11/StudentCreate.jsp\">Добавить студента</a></p>");
+		out.println("<p><a href=\"/lesson11/StudentUpdate.jsp\">Обновить студента</a></p>");
+		out.println("<p><a href=\"/lesson11/StudentDelete.jsp\">Удалить студента</a></p>");
+		
+		
 		out.close();
 
 	}
