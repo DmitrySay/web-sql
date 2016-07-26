@@ -8,7 +8,8 @@
 </head>
 <body>
 
-	<form action="StudentUpdate">
+	<form method="POST" action="StudentCreateUpdateDeleteServlet" name="formStudentUpdate">
+	<input type="hidden" name="action" value="update" />
 
 		<table>
 

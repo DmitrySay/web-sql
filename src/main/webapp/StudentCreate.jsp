@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Create student</title>
 </head>
 <body>
-	<form action="StudentCreate">
+	<form method="POST" action="StudentCreateUpdateDeleteServlet" name="formStudentCreate">
+	<input type="hidden" name="action" value="insert" />
 
 		<table>
 

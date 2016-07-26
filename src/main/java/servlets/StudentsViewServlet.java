@@ -47,9 +47,10 @@ public class StudentsViewServlet extends HttpServlet {
 				out.println("<td>" + gr.getGroupId() + "</td>");
 				out.println("<td>" + gr.getMarkId() + "</td>");
 				out.println("</tr>");
-
+			    				
 			}
-
+			
+			
 			studentDao.close();
 		} catch (Exception e) {
 			out.println("Ошибка выполнения webstudentDao");
@@ -63,6 +64,7 @@ public class StudentsViewServlet extends HttpServlet {
 		
 		
 		out.close();
+		
 
 	}
 

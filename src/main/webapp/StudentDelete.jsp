@@ -7,7 +7,9 @@
 <title>Удаление студента</title>
 </head>
 <body>
-	<form action="StudentDelete">
+	
+	<form method="POST" action="StudentCreateUpdateDeleteServlet" name="formStudentDelete">
+	<input type="hidden" name="action" value="delete" />
 		<table>
 			<tr>
 				<td>Удаление студента по </td>
