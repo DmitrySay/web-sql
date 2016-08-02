@@ -23,7 +23,7 @@ public class SqlStudentDao implements StudentDao {
     private PreparedStatement prepareStatementSelectAllStudentsGroupsMarks;
 
 
-    private String insertStudent = "INSERT INTO daotalk.Student (id, name, surname, group_id) VALUES (?, ?, ?, ?)";
+    private String insertStudent = "INSERT INTO daotalk.Student (name, surname, group_id) VALUES (?, ?, ?)";
     private String deleteStudent = "DELETE FROM daotalk.Student WHERE id = ?";
     private String selectStudent = "SELECT id, name, surname, enrolment_date, group_id FROM daotalk.Student WHERE id = ?;";
     private String updateStudent = "UPDATE daotalk.Student \n" + "SET name = ?, surname  = ?, group_id = ? \n" + "WHERE id = ?;";
@@ -51,14 +51,14 @@ public class SqlStudentDao implements StudentDao {
     }
 
     @Override
-    public void insertStudent(int id, String name, String surname, int groupId) throws DAOException {
+    public void insertStudent(String name, String surname, int groupId) throws DAOException {
 
         try {
 
-            prepareStatementInsert.setInt(1, id);
-            prepareStatementInsert.setString(2, name);
-            prepareStatementInsert.setString(3, surname);
-            prepareStatementInsert.setInt(4, groupId);
+           // prepareStatementInsert.setInt(1, id);
+            prepareStatementInsert.setString(1, name);
+            prepareStatementInsert.setString(2, surname);
+            prepareStatementInsert.setInt(3, groupId);
             prepareStatementInsert.execute();
 
         } catch (Exception e) {
@@ -128,7 +128,8 @@ public class SqlStudentDao implements StudentDao {
 
     @Override
     public void selectAllStudentAndGroup() throws DAOException {
-        try {
+    	
+    	try {
 
             ResultSet rs = prepareStatementSelectStudentGroup.executeQuery();
             while (rs.next()) {

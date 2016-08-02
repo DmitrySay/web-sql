@@ -19,4 +19,5 @@ CREATE  TABLE IF NOT EXISTS `daotalk`.`Student` (
   `student_id` INT NOT NULL,
   `mark` INT ,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`student_id`) REFERENCES `daotalk`.`Student`(`id`) ON UPDATE CASCADE ON DELETE CASCADE);
+  FOREIGN KEY (`student_id`) REFERENCES `daotalk`.`Student`(`id`) ON UPDATE CASCADE ON DELETE CASCADE
+  );

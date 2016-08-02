@@ -12,127 +12,36 @@
 </head>
 <body>
 
-<table>
-             <tr>
-				<td>Id</td>
-				<td>name</td>
-				<td>surname</td>
-				<td>groupId</td>
-			</tr>
+	<h2>Список студентов:</h2>
+	<table>
 
-
-
-
-	<c:forEach items="${message}" var="li">
 		<tr>
-			<td>${li.id}</td>
-			<td>${li.name}</td>
-			<td>${li.surname}</td>
-			<td>${li.groupId}</td>
-
+			<td>Id</td>
+			<td>name</td>
+			<td>surname</td>
+			<td>groupId</td>
 		</tr>
-	</c:forEach>
 
-</table>
-	</br>
-	</br>
-	</br>
-	<form method="POST" action="StudentServlet" name="formStudentCreate">
-		<input type="hidden" name="action" value="insert" />
 
-		<table>
-
+		<c:forEach items="${listStudent}" var="student">
 			<tr>
-				<td>Добавление студента</td>
+				<td>${student.id}</td>
+				<td>${student.name}</td>
+				<td>${student.surname}</td>
+				<td>${student.groupId}</td>
+              		
+					
+		 <td><a href="StudentServlet?action=delete&id=<c:out value="${student.id}"/>">Delete</a></td> 
+		 <td><a href="StudentServlet?action=updateForm&id=<c:out value="${student.id}"/>">Update</a></td>
+			
 			</tr>
+		</c:forEach>
 
-			<tr>
-				<td>id:</td>
-				<td><input type="text" name="id"></td>
-			</tr>
+	</table>
+<p><a href="StudentServlet?action=insert">AddStudent</a></p>
 
-			<tr>
-				<td>name:</td>
-				<td><input type="text" name="name"></td>
-			</tr>
 
-			<tr>
-				<td>surname:</td>
-				<td><input type="text" name="surname"></td>
-			</tr>
-
-			<tr>
-				<td>groupId:</td>
-				<td><input type="text" name="groupId"></td>
-			</tr>
-
-			<tr>
-
-				<td><input type="submit" value=" submit "></td>
-			</tr>
-
-		</table>
-	</form>
-	</br>
-	</br>
-	</br>
-	<form method="POST" action="StudentServlet" name="formStudentUpdate">
-	<input type="hidden" name="action" value="update" />
-
-		<table>
-
-			<tr>
-				<td>Обновление студента</td>
-			</tr>
-			<tr>
-				<td>id:</td>
-				<td><input type="text" name="id"></td>
-			</tr>
-
-			<tr>
-				<td>name:</td>
-				<td><input type="text" name="name"></td>
-			</tr>
-
-			<tr>
-				<td>surname:</td>
-				<td><input type="text" name="surname"></td>
-			</tr>
-
-			<tr>
-				<td>groupId:</td>
-				<td><input type="text" name="groupId"></td>
-			</tr>
-
-			<tr>
-
-				<td><input type="submit" value=" submit "></td>
-			</tr>
-
-		</table>
-	</form>
-	
-	</br>
-	</br>
-	</br>
-	<form method="POST" action="StudentServlet" name="formStudentDelete">
-		<input type="hidden" name="action" value="delete" />
-		<table>
-			<tr>
-				<td>Удаление студента по</td>
-				<td>id:</td>
-				<td><input type="text" name="id"></td>
-			</tr>
-			<tr>
-				<td><input type="submit" value=" submit "></td>
-			</tr>
-		</table>
-	</form>
-	
-	
-	
-	<p>	<a href="/lesson11/">На Главную страницу</a></p>
-	
+	<p><a href="/lesson11/">На Главную страницу</a></p>
 
 </body>
 </html>

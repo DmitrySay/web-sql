@@ -19,15 +19,15 @@ public class Listener implements HttpSessionListener {
 
 		try {
 			StudentDao studentDao = new SqlStudentDao();
-			event.getSession().setAttribute("studentDao", studentDao);
+		event.getSession().setAttribute("studentDao", studentDao);
 		} catch (DAOException e) {
 
 			e.printStackTrace();
 		}
 
 		try {
-			GroupDao grouptDao = new SqlGroupDao();
-			event.getSession().setAttribute("grouptDao", grouptDao);
+			GroupDao groupDao = new SqlGroupDao();
+			event.getSession().setAttribute("groupDao", groupDao);
 		} catch (DAOException e) {
 			e.printStackTrace();
 		}

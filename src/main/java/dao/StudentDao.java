@@ -9,7 +9,7 @@ import java.util.List;
 public interface StudentDao {
 
     /** Создает новую запись и соответствующий ей объект */
-    public void insertStudent(int id, String name, String surname, int groupId) throws DAOException;
+    public void insertStudent(String name, String surname, int groupId) throws DAOException;
 
     /** Возвращает объект соответствующий записи с первичным ключом key или null */
     public Student selectStudent( int id) throws DAOException;
@@ -28,6 +28,8 @@ public interface StudentDao {
     public void selectAllStudentsGroupsMarks() throws DAOException;
 
     public void close() throws DAOException;
+
+	
 
 
 

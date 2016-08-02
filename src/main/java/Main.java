@@ -12,21 +12,25 @@ public class Main {
     public static void main(String[] ars) {
 
 
-        try {
+    	/*        try {
             StudentDao studentDao = new SqlStudentDao();
 
-            System.out.println(studentDao.selectStudent(5));
+           
          //   System.out.println(studentDao.selectStudent(6));
          //   studentDao.selectAllStudentsGroupsMarks();
-         //   studentDao.selectAllStudentAndGroup();
-         //   studentDao.selectAllStudents();
+         
+          //  studentDao.insertStudent("rfrfrfrfrfr", "rfrfrfrfrfr", 2);
+          //  studentDao.selectAllStudentAndGroup();
+          //  studentDao.insertStudent("вася", "хрумкин", 3);
+            
+           // studentDao.selectAllStudents();
 
             studentDao.close();
         } catch (Exception e) {
             System.out.println("Ошибка выполнения studentDao");
         }
 
-/*
+
         try {
             GroupDao groupDao = new SqlGroupDao();
             groupDao.selectAllGroups();
@@ -38,8 +42,8 @@ public class Main {
 
         try {
             MarkDao markDao = new SqlMarkDao();
-            markDao.selectAllMarks();
-
+          
+          System.out.println( markDao.selectMark(4));
             markDao.close();
         } catch (Exception e) {
             System.out.println("Ошибка выполнения markDao");
