@@ -5,10 +5,11 @@ public class Mark {
 
     private int id;
     private int studentId;
+    private String name;
+    private String surname;
     private int mark;
-
-
-
+    
+	
     public void setId(int id) {
         this.id = id;
     }
@@ -33,10 +34,27 @@ public class Mark {
         return mark;
     }
 
+    
+    public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSurname() {
+		return surname;
+	}
+
+	public void setSurname(String surname) {
+		this.surname = surname;
+	}
+	
     @Override
     public String toString()
     {
-        return "( id " +this.id+ ", studentId " +this.studentId+ ", mark " +this.mark +" )";
+        return "( id " +this.id+ ", studentId " +this.studentId+ ", name " +this.name+ ", surname " +this.surname+ ", mark " +this.mark +" )";
     }
 
 }

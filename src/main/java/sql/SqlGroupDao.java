@@ -22,7 +22,7 @@ public class SqlGroupDao implements GroupDao {
     private PreparedStatement prepareStatementUpdate;
     private PreparedStatement prepareStatementSelectAllGroups;
 
-    private String insertGroup = "INSERT INTO daotalk.Group (id, number, department) VALUES (?, ?, ?)";
+    private String insertGroup = "INSERT INTO daotalk.Group (number, department) VALUES (?, ?)";
     private String selectGroup = "SELECT id, number, department FROM daotalk.Group WHERE id = ?;";
     private String updateGroup = "UPDATE daotalk.Group SET number = ?, department  = ? WHERE id = ?";
     private String deleteGroup = "DELETE FROM daotalk.Group WHERE id = ?";
@@ -33,9 +33,9 @@ public class SqlGroupDao implements GroupDao {
             DaoFactory daoFactory = new SqlDaoFactory();
             this.connection = daoFactory.getConnection();
             prepareStatementInsert = connection.prepareStatement(insertGroup);
-            prepareStatementDelete = connection.prepareStatement(selectGroup);
-            prepareStatementSelect = connection.prepareStatement(updateGroup);
-            prepareStatementUpdate = connection.prepareStatement(deleteGroup);
+            prepareStatementDelete = connection.prepareStatement(deleteGroup);
+            prepareStatementSelect = connection.prepareStatement(selectGroup);
+            prepareStatementUpdate = connection.prepareStatement(updateGroup);
             prepareStatementSelectAllGroups = connection.prepareStatement(selectAllGroups);
 
         } catch (Exception e) {
@@ -46,13 +46,13 @@ public class SqlGroupDao implements GroupDao {
 
 
     @Override
-    public void insertGroup(int id, int number, String department) throws DAOException {
+    public void insertGroup(int number, String department) throws DAOException {
 
         try {
 
-            prepareStatementInsert.setInt(1, id);
-            prepareStatementInsert.setInt(2, number);
-            prepareStatementInsert.setString(3, department);
+           
+            prepareStatementInsert.setInt(1, number);
+            prepareStatementInsert.setString(2, department);
             prepareStatementInsert.execute();
 
         } catch (Exception e) {

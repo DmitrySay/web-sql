@@ -1,73 +1,84 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
- <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title></title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
 
+	<div class="container">
+		<div class="row">
+			<div class="main-wrapper">
 
-
-<h2>Cтудент:</h2>
-	<table>
-
-		<tr>
-			<td>Id</td>
-			<td>name</td>
-			<td>surname</td>
-			<td>groupId</td>
-		</tr>
-
-<tr>
-				<td>${student.id}</td>
-				<td>${student.name}</td>
-				<td>${student.surname}</td>
-				<td>${student.groupId}</td>
-
-</tr>
-</table>
+				<h2>Cтудент:</h2>
 
 
 
-<form method="POST" action="StudentServlet" name="formStudentUpdate">
-		<table>
 
-			<tr>
-				<td>Обновление студента:</td>
-			</tr>
-		
-			<tr>
-				<td>id:</td>
-				<td> <input type="text" name="id"  readonly="readonly" 	value="<c:out value="${student.id}"/>" ></td>
-			</tr>
+				<form class="form-group" method="POST" action="StudentServlet" name="formStudentUpdate">
 
-			<tr>
-				<td>name:</td>
-				<td><input type="text" name="name" value="${student.name}"></td>
-			</tr>
 
-			<tr>
-				<td>surname:</td>
-				<td><input type="text" name="surname" value="<c:out value="${student.surname}"/>"></td>
-			</tr>
+					<table>
 
-			<tr>
-				<td>groupId:</td>
-				<td><input type="text" name="groupId" value="<c:out value="${student.groupId}"/>"></td>
-			</tr>
+						<tr>
+							<td>Обновление студента:</td>
+						</tr>
 
-			<tr>
+						<tr>
+							<td>ID</td>
+							<td><input type="text" name="id" readonly="readonly" class="form-control"
+								value="<c:out value="${student.id}"/>"></td>
+						</tr>
 
-				<td><input type="submit" value=" submit "></td>
-			</tr>
+						<tr>
+							<td>Имя</td>
+							<td><input type="text" class="form-control" name="name" value="${student.name}"></td>
+						</tr>
 
-		</table>
-	</form>
+						<tr>
+							<td>Фамилия</td>
+							<td><input type="text" name="surname" class="form-control"
+								value="<c:out value="${student.surname}"/>"></td>
+						</tr>
 
-<p><a href="/lesson11/">На Главную страницу</a></p>
-<p><a href="StudentServlet?action=listUser">Посмотрите всех студентов!</a></p>
+						<tr>
+							<td>Предмет:</td>
+							<td><select name="groupId" class="form-control">
+
+									<option selected value="${student.groupId}">${student.department}</option>
+
+									<c:forEach items="${messageGroup}" var="group">
+										<option value="${group.id}">${group.department}</option>
+									</c:forEach>
+							</select></td>
+						</tr>
+
+
+
+
+						<tr>
+							<td><input type="submit" value="Сохранить" class="form-control"></td>
+						</tr>
+
+
+					</table>
+				</form>
+
+				<p>
+					<a href="/lesson11/">На главную страницу</a>
+				</p>
+				<p>
+					<a href="StudentServlet?action=listStudent">Посмотрите всех
+						студентов!</a>
+				</p>
+
+			</div>
+		</div>
+	</div>
 </body>
 </html>

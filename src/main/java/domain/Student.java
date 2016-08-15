@@ -2,79 +2,87 @@ package domain;
 
 import java.sql.Date;
 
-
 public class Student {
 
-    private int id;
-    private String name;
-    private String surname;
-    private Date enrolmentDate;
-    private int groupId;
-    private int markId;
+	private int id;
+	private String name;
+	private String surname;
+	private Date enrolmentDate;
+	private int groupId;
+	private int markId;
+	private int number;
+	private String department;
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public String getDepartment() {
+		return department;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setDepartment(String department) {
+		this.department = department;
+	}
 
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
+	public void setNumber(int number) {
 
-    public void setEnrolmentDate(Date enrolmentDate) {
-        this.enrolmentDate = enrolmentDate;
-    }
+		this.number = number;
+	}
 
-    public void setGroupId(int groupId) {
-        this.groupId = groupId;
-    }
+	public int getNumber() {
+		return number;
+	}
 
-    public void setMarkId(int markId) {
-        this.markId = markId;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public int getId() {
-        return id;
-    }
+	public void setSurname(String surname) {
+		this.surname = surname;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setEnrolmentDate(Date enrolmentDate) {
+		this.enrolmentDate = enrolmentDate;
+	}
 
-    public String getSurname() {
-        return surname;
-    }
+	public void setGroupId(int groupId) {
+		this.groupId = groupId;
+	}
 
-    public Date getEnrolmentDate() {
-        return enrolmentDate;
-    }
+	public void setMarkId(int markId) {
+		this.markId = markId;
+	}
 
-    public int getGroupId() {
-        return groupId;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public int getMarkId() {
-        return markId;
-    }
+	public String getName() {
+		return name;
+	}
 
-    @Override
-    public String toString() {
-        return "( id "
-                + this.id
-                + ", name "
-                + this.name
-                + ", surname "
-                + this.surname
-                + ", enrolmentDate "
-                + this.enrolmentDate
-                + ", groupId "
-                + this.groupId
-                + ", markId "
-                + this.markId + " )";
-    }
+	public String getSurname() {
+		return surname;
+	}
+
+	public Date getEnrolmentDate() {
+		return enrolmentDate;
+	}
+
+	public int getGroupId() {
+		return groupId;
+	}
+
+	public int getMarkId() {
+		return markId;
+	}
+
+	@Override
+	public String toString() {
+		return "( id " + this.id + ", name " + this.name + ", surname " + this.surname + ", enrolmentDate "
+				+ this.enrolmentDate + ", groupId " + this.groupId + " number " + this.number + " depatment "
+				+ this.department + ", markId " + this.markId + " )";
+	}
 
 }

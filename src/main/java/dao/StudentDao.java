@@ -23,7 +23,7 @@ public interface StudentDao {
     /** Возвращает список объектов соответствующих всем записям в базе данных */
     public List<Student> selectAllStudents() throws DAOException;
 
-    public void selectAllStudentAndGroup() throws DAOException;
+    public List<Student> selectAllStudentAndGroup() throws DAOException;
 
     public void selectAllStudentsGroupsMarks() throws DAOException;
 

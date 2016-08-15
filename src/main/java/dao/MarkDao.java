@@ -9,7 +9,7 @@ public interface MarkDao {
     /**
      * Создает новую запись и соответствующий ей объект
      */
-    public void insertMark(int id, int studentId, int mark) throws DAOException;
+    public void insertMark(int studentId, int mark) throws DAOException;
 
     /**
      * Возвращает список объектов соответствующих всем записям в базе данных

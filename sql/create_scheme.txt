@@ -4,7 +4,9 @@ CREATE  TABLE IF NOT EXISTS `daotalk`.`Group` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `number` INT NOT NULL ,
   `department` VARCHAR(45) NULL ,
-  PRIMARY KEY (`id`) );
+  PRIMARY KEY (`id`) 
+  )
+  ;
 
 CREATE  TABLE IF NOT EXISTS `daotalk`.`Student` (
   `id` INT NOT NULL AUTO_INCREMENT ,
@@ -12,7 +14,9 @@ CREATE  TABLE IF NOT EXISTS `daotalk`.`Student` (
   `surname` VARCHAR(45) NULL ,
   `enrolment_date` DATE NULL ,
   `group_id` INT ,
-  PRIMARY KEY (`id`) );
+  PRIMARY KEY (`id`) 
+  )
+  ;
 
   CREATE  TABLE IF NOT EXISTS `daotalk`.`Mark` (
   `id` INT NOT NULL AUTO_INCREMENT ,
@@ -20,4 +24,5 @@ CREATE  TABLE IF NOT EXISTS `daotalk`.`Student` (
   `mark` INT ,
   PRIMARY KEY (`id`),
   FOREIGN KEY (`student_id`) REFERENCES `daotalk`.`Student`(`id`) ON UPDATE CASCADE ON DELETE CASCADE
-  );
+  )
+  ;

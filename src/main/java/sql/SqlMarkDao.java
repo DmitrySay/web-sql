@@ -26,8 +26,8 @@ public class SqlMarkDao implements MarkDao {
     private String selectMark = "SELECT id, student_id, mark FROM daotalk.Mark WHERE id = ?;";
     private String updateMark = "UPDATE daotalk.Mark SET student_id = ?, mark  = ? WHERE id = ?";
     private String deleteMark = "DELETE FROM daotalk.Mark WHERE id = ?";
-    private String insertMark = "INSERT INTO daotalk.Mark(id, student_id, mark) VALUES (?, ?, ?)";
-    private String selectAllMarks = "SELECT id, student_id, mark FROM daotalk.Mark";
+    private String insertMark = "INSERT INTO daotalk.Mark(student_id, mark) VALUES (?, ?)";
+    private String selectAllMarks = "SELECT M.id, M.student_id, M.mark, S.id, S.name, S.surname FROM `Student` S INNER JOIN `Mark` M ON M.student_id = S.id;";
 
 
     public SqlMarkDao() throws DAOException {
@@ -51,13 +51,13 @@ public class SqlMarkDao implements MarkDao {
 
 
     @Override
-    public void insertMark(int id, int studentId, int mark) throws DAOException {
+    public void insertMark(int studentId, int mark) throws DAOException {
 
         try {
 
-            prepareStatementInsert.setInt(1, id);
-            prepareStatementInsert.setInt(2, studentId);
-            prepareStatementInsert.setInt(3, mark);
+          
+            prepareStatementInsert.setInt(1, studentId);
+            prepareStatementInsert.setInt(2, mark);
             prepareStatementInsert.execute();
 
         } catch (Exception e) {
@@ -133,6 +133,8 @@ public class SqlMarkDao implements MarkDao {
                 Mark m = new Mark();
                 m.setId(rs.getInt("id"));
                 m.setStudentId(rs.getInt("student_id"));
+                m.setName(rs.getString("name"));
+				m.setSurname(rs.getString("surname"));
                 m.setMark(rs.getInt("mark"));
                 list.add(m);
             }

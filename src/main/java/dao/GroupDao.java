@@ -9,7 +9,7 @@ public interface GroupDao {
 
     /** Создает новую запись и соответствующий ей объект */
 
-    public void insertGroup(int id, int number, String department) throws DAOException ;
+    public void insertGroup(int number, String department) throws DAOException ;
 
 
     /** Возвращает объект соответствующий записи с первичным ключом key или null */

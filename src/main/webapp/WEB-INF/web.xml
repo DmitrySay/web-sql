@@ -4,4 +4,12 @@
   <welcome-file-list>
     <welcome-file>MainPage.html</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <servlet-name>MarkServlet</servlet-name>
+    <servlet-class>servlets.MarkServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MarkServlet</servlet-name>
+    <url-pattern>/MarkServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

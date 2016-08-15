@@ -1,51 +1,67 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Добавление студента</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
 
+	<div class="container">
+		<div class="row">
+			<div class="main-wrapper">
+
+				<br> <br>
+				<form class="form-group" method="POST" action="StudentServlet"
+					name="formStudentInsert">
+					<table>
+
+						<tr>
+							<td>Добавление студента:</td>
+						</tr>
 
 
+						<tr>
+							<td>Имя:</td>
+							<td><input type="text" name="name" class="form-control"></td>
+						</tr>
 
-<form method="POST" action="StudentServlet" name="formStudentInsert">
-		<table>
+						<tr>
+							<td>Фамилия:</td>
+							<td><input type="text" name="surname" class="form-control"></td>
+						</tr>
 
-			<tr>
-				<td>Добавление студента:</td>
-			</tr>
-		
-		
-			<tr>
-				<td>name:</td>
-				<td><input type="text" name="name"></td>
-			</tr>
+						<tr>
+							<td>Предмет:</td>
+							<td><select name="groupId" class="form-control">
+									<c:forEach items="${messageGroup}" var="group">
+										<option value="${group.id}">${group.department}</option>
+									</c:forEach>
+							</select></td>
+						</tr>
 
-			<tr>
-				<td>surname:</td>
-				<td><input type="text" name="surname"></td>
-			</tr>
+						<td><input type="submit" value="Сохранить"
+							class="form-control"></td>
+						</tr>
 
-			<tr>
-				<td>groupId:</td>
-				<td><input type="text" name="groupId"></td>
-			</tr>
+					</table>
+				</form>
 
-			<tr>
+				<p>
+					<a href="/lesson11/">На главную страницу</a>
+				</p>
+				<p>
+					<a href="StudentServlet?action=listStudent">Посмотрите всех
+						студентов!</a>
+				</p>
 
-				<td><input type="submit" value=" submit "></td>
-			</tr>
-
-		</table>
-	</form>
-
-<p><a href="/lesson11/">На Главную страницу</a></p>
-<p><a href="StudentServlet?action=listUser">Посмотрите всех студентов!</a></p>
-
-
+			</div>
+		</div>
+	</div>
 
 
 </body>
