@@ -14,4 +14,6 @@ public interface DaoFactory {
     public GroupDao getGroupDao(Connection connection) throws DAOException;
 
     public MarkDao getMarkDao(Connection connection) throws DAOException;
+    
+    public UserDao getUserDao(Connection connection) throws DAOException;
 }

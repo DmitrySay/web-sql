@@ -8,15 +8,27 @@ import dao.DAOException;
 import dao.GroupDao;
 import dao.MarkDao;
 import dao.StudentDao;
+import dao.UserDao;
 import sql.SqlGroupDao;
 import sql.SqlMarkDao;
 import sql.SqlStudentDao;
+import sql.SqlUserDao;
 
 @WebListener
 public class Listener implements HttpSessionListener {
 
 	public void sessionCreated(HttpSessionEvent event) {
 
+		
+		try {
+			UserDao userDao = new SqlUserDao();
+		event.getSession().setAttribute("userDao", userDao);
+		} catch (DAOException e) {
+
+			e.printStackTrace();
+		}
+		
+		
 		try {
 			StudentDao studentDao = new SqlStudentDao();
 		event.getSession().setAttribute("studentDao", studentDao);
@@ -43,6 +55,17 @@ public class Listener implements HttpSessionListener {
 
 	public void sessionDestroyed(HttpSessionEvent event) {
 
+		UserDao userDao = (UserDao) event.getSession().getAttribute("userDao");
+
+		try {
+			userDao.close();
+		} catch (DAOException e) {
+
+			e.printStackTrace();
+		}
+		
+		
+		
 		GroupDao groupDao = (GroupDao) event.getSession().getAttribute("groupDao");
 
 		try {

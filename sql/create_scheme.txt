@@ -1,5 +1,14 @@
 CREATE SCHEMA `daotalk` DEFAULT CHARACTER SET utf8 ;
 
+CREATE  TABLE IF NOT EXISTS `daotalk`.`User` (
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `username` VARCHAR(45) NOT NULL ,
+  `password` VARCHAR(45) NOT NULL ,
+  PRIMARY KEY (`id`) 
+  )
+  ;
+
+
 CREATE  TABLE IF NOT EXISTS `daotalk`.`Group` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `number` INT NOT NULL ,

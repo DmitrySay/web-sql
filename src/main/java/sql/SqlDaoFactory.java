@@ -57,6 +57,11 @@ public class SqlDaoFactory implements DaoFactory {
     public MarkDao getMarkDao(Connection connection) throws DAOException{
         return new SqlMarkDao();
     }
+    
+    @Override
+    public UserDao getUserDao(Connection connection) throws DAOException{
+        return new SqlUserDao();
+    }
 
 
 }

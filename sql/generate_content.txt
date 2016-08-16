@@ -1,3 +1,9 @@
+
+INSERT INTO `daotalk`.`User` (`username`, `password`) 
+VALUES ('admin', 'adminpassword');
+
+
+
 INSERT INTO `daotalk`.`Group` (`number`, `department`) 
 VALUES ('230750', 'Математика');
 INSERT INTO `daotalk`.`Group` (`number`, `department`) 

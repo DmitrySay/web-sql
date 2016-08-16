@@ -1,20 +1,13 @@
 import java.util.List;
+import dao.UserDao;
+import domain.User;
+import sql.SqlUserDao;
 
-import dao.GroupDao;
-import dao.MarkDao;
-import dao.StudentDao;
-import domain.Group;
-import domain.Mark;
-import domain.Student;
-import sql.SqlGroupDao;
-import sql.SqlMarkDao;
-import sql.SqlStudentDao;
 
 public class Main {
 
 	public static void main(String[] ars) {
 
-				
 		/*
 		 * try { StudentDao studentDao = new SqlStudentDao();
 		 * 
@@ -50,20 +43,26 @@ public class Main {
 		 * System.out.println("Ошибка выполнения groupDao"); }
 		 */
 
+		/*
+		 * try { MarkDao markDao = new SqlMarkDao();
+		 * 
+		 * List<Mark> list =markDao.selectAllMarks(); int i=0; for (i=0;
+		 * i<list.size(); i++){ System.out.println(list.get(i)); }
+		 * markDao.close(); } catch (Exception e) {
+		 * System.out.println("Ошибка выполнения markDao"); }
+		 */
 /*		try {
-			MarkDao markDao = new SqlMarkDao();
-			
-			List<Mark> list =markDao.selectAllMarks();
-			int i=0;
-			for (i=0; i<list.size(); i++){
-				System.out.println(list.get(i)); 
-				}
-			markDao.close();
+			UserDao userDao = new SqlUserDao();
+			List<User> list = userDao.selectAllUsers();
+
+			int i = 0;
+			for (i = 0; i < list.size(); i++) {
+				System.out.println(list.get(i));
+			}
+			userDao.close();
 		} catch (Exception e) {
-			System.out.println("Ошибка выполнения markDao");
-		}
-*/
+			System.out.println("Ошибка выполнения Dao");
+		}*/
 	}
 
-	
 }
