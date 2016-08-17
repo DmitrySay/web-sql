@@ -63,7 +63,7 @@
 <p><a href="StudentServlet?action=insertStudent">Добавить студента</a></p>
 
 
-	<h5 ><a href="/lesson11/">На главную страницу</a></h5>
+	<h5 ><a href="/lesson11/MainPage.html">На главную страницу</a></h5>
 
 
 	</div>

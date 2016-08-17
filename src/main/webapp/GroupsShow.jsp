@@ -45,7 +45,7 @@
 					<a href="GroupServlet?action=insertGroup">Добавить группу</a>
 				</p>
 				<p>
-					<a href="/lesson11/">На главную страницу</a>
+					<a href="/lesson11/MainPage.html">На главную страницу</a>
 				</p>
 
 			</div>

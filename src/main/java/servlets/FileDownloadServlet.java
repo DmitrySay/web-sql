@@ -27,12 +27,16 @@ public class FileDownloadServlet extends HttpServlet {
 
 		FileInputStream fileInputStream = new FileInputStream(file);
 		ServletOutputStream servletOutputStream = response.getOutputStream();
+
 		try {
 			byte[] buffer = new byte[1024];
 
-			while (fileInputStream.read(buffer) != -1) {
-				servletOutputStream.write(buffer);
+			int read = 0;
+			while ((read = fileInputStream.read(buffer, 0, 1024)) != -1) {
+				servletOutputStream.write(buffer, 0, read);
+
 			}
+
 		} finally {
 			try {
 				servletOutputStream.close();
@@ -46,7 +50,5 @@ public class FileDownloadServlet extends HttpServlet {
 			}
 		}
 
-		
-		
 	}
 }

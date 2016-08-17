@@ -70,7 +70,7 @@
 				</form>
 
 				<p>
-					<a href="/lesson11/">На главную страницу</a>
+					<a href="/lesson11/MainPage.html">На главную страницу</a>
 				</p>
 				<p>
 					<a href="StudentServlet?action=listStudent">Посмотрите всех

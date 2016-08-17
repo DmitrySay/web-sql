@@ -54,7 +54,7 @@
 				</form>
 
 				<p>
-					<a href="/lesson11/">На главную страницу</a>
+					<a href="/lesson11/MainPage.html">На главную страницу</a>
 				</p>
 				<p>
 					<a href="GroupServlet?action=listGroup">Посмотрите все группы!</a>

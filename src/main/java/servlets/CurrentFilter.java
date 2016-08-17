@@ -20,32 +20,29 @@ import domain.User;
 
 public class CurrentFilter implements Filter {
 
-	private List<String> pathFilters = Arrays.asList(new String[] {"Login.jsp"});
+	private List<String> pathFilters = Arrays.asList(new String[] { "Login.jsp", "LoginServlet" });
 
 	public CurrentFilter() {
 
 	}
 
-	
-	
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
-		
+
 	}
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChaine)
 			throws IOException, ServletException {
 
- 		String uri = ((HttpServletRequest) request).getRequestURI();
+		String uri = ((HttpServletRequest) request).getRequestURI();
 		String path = StringUtils.substringAfterLast(uri, "/");
 
-		if (!pathFilters.contains(path)) {
+		if (pathFilters.contains(path)) {
 
-			
-			 filterChaine.doFilter(request, response);
-			 return;
-			
+			filterChaine.doFilter(request, response);
+			return;
+
 		}
 
 		HttpSession session = ((HttpServletRequest) request).getSession();
@@ -53,14 +50,13 @@ public class CurrentFilter implements Filter {
 
 		if (user != null) {
 
+			filterChaine.doFilter(request, response);
+
+		} else {
+
 			((HttpServletResponse) response).sendRedirect("/lesson11/Login.jsp");
-			 filterChaine.doFilter(request, response);
-			 return;
 
-		} 
-
-		 return;
-		
+		}
 
 	}
 
