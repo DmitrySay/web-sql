@@ -16,7 +16,7 @@
 			<div class="main-wrapper">
 
 				<br> <br>
-				<form class="form-group" method="POST" action="StudentServlet"
+				<form class="form-group" method="POST" action="GlobalServlet?action=formStudentInsert"
 					name="formStudentInsert">
 					<table>
 
@@ -56,7 +56,7 @@
 					<a href="/lesson11/MainPage.html">На главную страницу</a>
 				</p>
 				<p>
-					<a href="StudentServlet?action=listStudent">Посмотрите всех
+					<a href="GlobalServlet?action=listStudent">Посмотрите всех
 						студентов!</a>
 				</p>
 

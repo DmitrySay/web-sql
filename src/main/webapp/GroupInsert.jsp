@@ -19,7 +19,7 @@
 <br>
 <br>
 
-				<form class="form-group" method="POST" action="GroupServlet" name="formGroupInsert">
+				<form class="form-group" method="POST" action="GlobalServlet?action=formGroupInsert" name="formGroupInsert">
 					<table>
 
 						<tr>
@@ -48,7 +48,7 @@
 					<a href="/lesson11/MainPage.html">На главную страницу</a>
 				</p>
 				<p>
-					<a href="GroupServlet?action=listGroup">Посмотрите все группы!</a>
+					<a href="GlobalServlet?action=listGroup">Посмотрите все группы!</a>
 				</p>
 
 

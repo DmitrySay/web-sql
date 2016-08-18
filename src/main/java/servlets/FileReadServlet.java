@@ -24,7 +24,7 @@ public class FileReadServlet extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
 
-		File file = new File("C://Users/Acer/Desktop/work/lesson11/src/main/webapp/text.txt");
+		File file = new File("work/lesson11/src/main/webapp/text.txt");
 
 		FileInputStream fileInputStream = new FileInputStream(file);
 		ServletOutputStream servletOutputStream = response.getOutputStream();
@@ -73,7 +73,6 @@ public class FileReadServlet extends HttpServlet {
 
 			}
 		}
-		
-		
+
 	}
 }

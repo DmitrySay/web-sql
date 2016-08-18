@@ -19,9 +19,9 @@
 			<div class="main-wrapper">
 
 <nav class="navbar navbar-inverse">
-<a class="navbar-brand" href="StudentServlet?action=listStudent">Список студентов</a>
-<a class="navbar-brand" href="GroupServlet?action=listGroup">Список групп</a>	
-<a class="navbar-brand" href="MarkServlet?action=listMark">Журнал Оценок</a>
+<a class="navbar-brand" href="GlobalServlet?action=listStudent">Список студентов</a>
+<a class="navbar-brand" href="GlobalServlet?action=listGroup">Список групп</a>	
+<a class="navbar-brand" href="GlobalServlet?action=listMark">Журнал Оценок</a>
 </nav>
 		
 
@@ -53,14 +53,14 @@
 				
 				
 					
-		 <td><a href="StudentServlet?action=deleteStudent&id=<c:out value="${student.id}"/>">Удалить</a></td> 
-		 <td><a href="StudentServlet?action=updateFormStudent&id=<c:out value="${student.id}"/>">Обновить</a></td>
+		 <td><a href="GlobalServlet?action=deleteStudent&id=<c:out value="${student.id}"/>">Удалить</a></td> 
+		 <td><a href="GlobalServlet?action=updateFormStudent&id=<c:out value="${student.id}"/>">Обновить</a></td>
 			
 			</tr>
 		</c:forEach>
 
 	</table>
-<p><a href="StudentServlet?action=insertStudent">Добавить студента</a></p>
+<p><a href="GlobalServlet?action=insertStudent">Добавить студента</a></p>
 
 
 	<h5 ><a href="/lesson11/MainPage.html">На главную страницу</a></h5>

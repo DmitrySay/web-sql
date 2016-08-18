@@ -20,7 +20,8 @@ public class FileDownloadServlet extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
 
-		String filename = "C://Users/Acer/Desktop/work/lesson11/src/main/webapp/2.txt";
+		String filename = ("work/lesson11/src/main/webapp/2.txt");
+
 		response.setContentType("application/octet-stream");
 		response.setHeader("Content-Disposition", "attachment;filename=" + filename);
 		File file = new File(filename);
@@ -51,4 +52,5 @@ public class FileDownloadServlet extends HttpServlet {
 		}
 
 	}
+
 }

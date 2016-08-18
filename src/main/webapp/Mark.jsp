@@ -23,7 +23,7 @@
 <br>
 <br>
 
-				<form class="form-group" method="POST" action="MarkServlet" name="formMarkUpdate">
+				<form class="form-group" method="POST" action="GlobalServlet?action=formMarkUpdate" name="formMarkUpdate">
 					<table>
 
 						<tr>
@@ -61,7 +61,7 @@
 					<a href="/lesson11/MainPage.html">На главную страницу</a>
 				</p>
 				<p>
-					<a href="MarkServlet?action=listMark">Журнал оценок</a>
+					<a href="GlobalServlet?action=listMark">Журнал оценок</a>
 				</p>
 
 

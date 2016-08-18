@@ -20,7 +20,7 @@
 
 
 
-				<form class="form-group" method="POST" action="StudentServlet" name="formStudentUpdate">
+				<form class="form-group" method="POST" action="GlobalServlet?action=formStudentUpdate" name="formStudentUpdate">
 
 
 					<table>
@@ -73,7 +73,7 @@
 					<a href="/lesson11/MainPage.html">На главную страницу</a>
 				</p>
 				<p>
-					<a href="StudentServlet?action=listStudent">Посмотрите всех
+					<a href="GlobalServlet?action=listStudent">Посмотрите всех
 						студентов!</a>
 				</p>
 

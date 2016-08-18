@@ -19,7 +19,7 @@
 
 
 
-				<form method="POST" action="MarkServlet" name="formMarkInsert"> 
+				<form method="POST" action="GlobalServlet?action=formMarkInsert" name="formMarkInsert"> 
 					<table>
 
 						<tr>
@@ -49,7 +49,7 @@
 					<a href="/lesson11/MainPage.html">На главную страницу</a>
 				</p>
 				<p>
-					<a href="MarkServlet?action=listMark">Журнал оценок</a>
+					<a href="GlobalServlet?action=listMark">Журнал оценок</a>
 				</p>
 
 

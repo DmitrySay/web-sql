@@ -33,16 +33,16 @@
 							<td>${group.number}</td>
 							<td>${group.department}</td>
 							<td><a
-								href="GroupServlet?action=deleteGroup&idGroup=<c:out value="${group.id}"/>">Удалить</a></td>
+								href="GlobalServlet?action=deleteGroup&idGroup=<c:out value="${group.id}"/>">Удалить</a></td>
 							<td><a
-								href="GroupServlet?action=updateFormGroup&idGroup=<c:out value="${group.id}"/>">Обновить</a></td>
+								href="GlobalServlet?action=updateFormGroup&idGroup=<c:out value="${group.id}"/>">Обновить</a></td>
 
 						</tr>
 					</c:forEach>
 
 				</table>
 				<p>
-					<a href="GroupServlet?action=insertGroup">Добавить группу</a>
+					<a href="GlobalServlet?action=insertGroup">Добавить группу</a>
 				</p>
 				<p>
 					<a href="/lesson11/MainPage.html">На главную страницу</a>

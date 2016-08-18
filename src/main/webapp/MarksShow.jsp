@@ -39,9 +39,9 @@
 								<td>${mark.surname}</td>
 								<td>${mark.mark}</td>
 								<td><a
-									href="MarkServlet?action=deleteMark&idMark=<c:out value="${mark.id}"/>">Удалить</a></td>
+									href="GlobalServlet?action=deleteMark&idMark=<c:out value="${mark.id}"/>">Удалить</a></td>
 								<td><a
-									href="MarkServlet?action=updateFormMark&idMark=<c:out value="${mark.id}"/>">Обновить</a></td>
+									href="GlobalServlet?action=updateFormMark&idMark=<c:out value="${mark.id}"/>">Обновить</a></td>
 
 							</tr>
 						</c:forEach>
@@ -53,7 +53,7 @@
 
 
 				<p>
-					<a href="MarkServlet?action=insertMark">Добавить оценку</a>
+					<a href="GlobalServlet?action=insertMark">Добавить оценку</a>
 				</p>
 				<p>
 					<a href="/lesson11/MainPage.html">На главную страницу</a>
