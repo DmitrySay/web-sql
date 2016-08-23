@@ -12,15 +12,15 @@
 <br>
 <br>
 <br>
-<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 no-padding-left">
+<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 	<form method="POST" action="LoginServlet">
 		<div class="form-group">
 		      <label for="username">login</label>
-		      <input type="text" class="form-control" name="username" placeholder="введите логин">
+		      <input type="text" class="form-control" name="username" placeholder="введите логин" >
 		</div>
 		<div class="form-group">
 	    	 <label for="password">password</label>
-		     <input	type="password" class="form-control" name="password" placeholder="введите пароль">
+		     <input	type="password" class="form-control" name="password" placeholder="введите пароль" >
 		</div>
 		<button type="submit" class="btn btn-default">Submit</button>
 	</form>

@@ -23,10 +23,10 @@ public class SqlMarkDao implements MarkDao {
     private PreparedStatement prepareStatementSelectAllMarks;
 
 
-    private String selectMark = "SELECT id, student_id, mark FROM daotalk.Mark WHERE id = ?;";
-    private String updateMark = "UPDATE daotalk.Mark SET student_id = ?, mark  = ? WHERE id = ?";
-    private String deleteMark = "DELETE FROM daotalk.Mark WHERE id = ?";
-    private String insertMark = "INSERT INTO daotalk.Mark(student_id, mark) VALUES (?, ?)";
+    private String selectMark = "SELECT id, student_id, mark FROM `Mark` WHERE id = ?;";
+    private String updateMark = "UPDATE `Mark` SET student_id = ?, mark  = ? WHERE id = ?";
+    private String deleteMark = "DELETE FROM `Mark` WHERE id = ?";
+    private String insertMark = "INSERT INTO `Mark`(student_id, mark) VALUES (?, ?)";
     private String selectAllMarks = "SELECT M.id, M.student_id, M.mark, S.id, S.name, S.surname FROM `Student` S INNER JOIN `Mark` M ON M.student_id = S.id;";
 
 

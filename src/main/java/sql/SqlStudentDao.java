@@ -20,13 +20,13 @@ public class SqlStudentDao implements StudentDao {
 	private PreparedStatement prepareStatementSelectAllStudents;
 	private PreparedStatement prepareStatementSelectAllStudentsGroupsMarks;
 
-	private String insertStudent = "INSERT INTO daotalk.Student (name, surname, group_id) VALUES (?, ?, ?)";
-	private String deleteStudent = "DELETE FROM daotalk.Student WHERE id = ?";
+	private String insertStudent = "INSERT INTO `Student` (name, surname, group_id) VALUES (?, ?, ?)";
+	private String deleteStudent = "DELETE FROM `Student` WHERE id = ?";
 	private String selectStudent = "SELECT S.id, S.name, S.surname, S.enrolment_date, S.group_id, G.id, G.number, G.department  FROM `Student` S INNER JOIN `Group` G ON S.group_id = G.id WHERE S.id = ?;";
-	private String updateStudent = "UPDATE daotalk.Student \n" + "SET name = ?, surname  = ?, group_id = ? \n"
+	private String updateStudent = "UPDATE `Student` \n" + "SET name = ?, surname  = ?, group_id = ? \n"
 			+ "WHERE id = ?;";
 	private String selectStudentandGroup = "SELECT S.id, S.name, S.surname, S.enrolment_date, G.id, G.number, G.department FROM `Student` S INNER JOIN `Group` G ON S.group_id = G.id";
-	private String selectAllStudents = "SELECT id, name, surname, enrolment_date, group_id FROM daotalk.Student;";
+	private String selectAllStudents = "SELECT id, name, surname, enrolment_date, group_id FROM `Student`;";
 	private String selectAllStudentsGroupsMarks = "SELECT S.id, S.name, S.surname, S.enrolment_date, G.id, G.number, G.department, M.mark FROM `Student` S INNER JOIN `Group` G ON S.group_id = G.id INNER JOIN `Mark` M ON M.student_id=S.id";
 
 	

@@ -16,7 +16,7 @@ public class SqlUserDao implements UserDao {
 
 	private Connection connection= null;
 	private PreparedStatement prepareStatementSelectAllUsers;
-	private String selectAllUsers = "SELECT id, username, password FROM daotalk.User;";
+	private String selectAllUsers = "SELECT id, username, password FROM `User`;";
 
 	public SqlUserDao() throws DAOException {
 

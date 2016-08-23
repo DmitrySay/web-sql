@@ -22,11 +22,11 @@ public class SqlGroupDao implements GroupDao {
     private PreparedStatement prepareStatementUpdate;
     private PreparedStatement prepareStatementSelectAllGroups;
 
-    private String insertGroup = "INSERT INTO daotalk.Group (number, department) VALUES (?, ?)";
-    private String selectGroup = "SELECT id, number, department FROM daotalk.Group WHERE id = ?;";
-    private String updateGroup = "UPDATE daotalk.Group SET number = ?, department  = ? WHERE id = ?";
-    private String deleteGroup = "DELETE FROM daotalk.Group WHERE id = ?";
-    private String selectAllGroups = "SELECT id, number, department FROM daotalk.Group";
+    private String insertGroup = "INSERT INTO `group` (number, department) VALUES (?, ?)";
+    private String selectGroup = "SELECT id, number, department FROM `group` WHERE id = ?;";
+    private String updateGroup = "UPDATE `group` SET number = ?, department  = ? WHERE id = ?";
+    private String deleteGroup = "DELETE FROM `group` WHERE id = ?";
+    private String selectAllGroups = "SELECT id, number, department FROM `group`";
 
     public SqlGroupDao() throws DAOException {
         try {

@@ -51,7 +51,7 @@ public class Main {
 		 * markDao.close(); } catch (Exception e) {
 		 * System.out.println("Ошибка выполнения markDao"); }
 		 */
-/*		try {
+		try {
 			UserDao userDao = new SqlUserDao();
 			List<User> list = userDao.selectAllUsers();
 
@@ -62,7 +62,7 @@ public class Main {
 			userDao.close();
 		} catch (Exception e) {
 			System.out.println("Ошибка выполнения Dao");
-		}*/
+		}
 	}
 
 }
