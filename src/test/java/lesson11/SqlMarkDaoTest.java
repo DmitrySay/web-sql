@@ -50,7 +50,7 @@ public class SqlMarkDaoTest {
 	}
 
 	@Test
-	public void updateGroupTest() throws Exception {
+	public void updateMarkTest() throws Exception {
 
 		list = markDao.selectAllMarks();
 		Assert.assertNotNull(list);
@@ -103,7 +103,7 @@ public class SqlMarkDaoTest {
 	}
 
 	@Test
-	public void deleteGroupTest() throws Exception {
+	public void deleteMarkTest() throws Exception {
 
 		markDao.insertMark(2, 5);
 		list = markDao.selectAllMarks();
